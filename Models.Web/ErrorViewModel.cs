@@ -1,6 +1,6 @@
 using System;
 
-namespace Eventures.Web.Models
+namespace Models.Web
 {
     public class ErrorViewModel
     {
