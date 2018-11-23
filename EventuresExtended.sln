@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eventures.Web", "Eventures.Web\Eventures.Web.csproj", "{14B75758-9393-415E-921E-934F99B0FA4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14B75758-9393-415E-921E-934F99B0FA4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14B75758-9393-415E-921E-934F99B0FA4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14B75758-9393-415E-921E-934F99B0FA4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14B75758-9393-415E-921E-934F99B0FA4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97E26B28-670F-4F99-A4B0-2D2C4E2E93B7}
+	EndGlobalSection
+EndGlobal
