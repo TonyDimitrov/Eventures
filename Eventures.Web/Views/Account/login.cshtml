@@ -1,0 +1,49 @@
+﻿@model Eventures.Web.ViewModels.LoginVM
+
+@{
+    ViewData["Title"] = "login";
+}
+<h2 class="text-center mt-2">Login</h2>
+
+<div class="row d-flex justify-content-center">
+
+    <div class="col-md-4">
+        <hr class="hr-2" />
+        <form asp-action="login" asp-controller="account" method="post">
+
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input type="password" asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <hr class="hr-2" />
+            <div class="form-group">
+                <div class="checkbox text-center">
+                    <label>
+                        <input asp-for="RememberMe" /> @Html.DisplayNameFor(model => model.RememberMe)
+                    </label>
+                </div>
+            </div>
+            <hr class="hr-2" />
+            <div class="form-group text-center">
+                <input type="submit" value="Login" class="btn btn-default chushka-bg-color" />
+            </div>
+        </form>
+        <div class="text-center">
+            <a asp-action="forgottenPassword" asp-controller="account" class="btn btn-link">Forgot Your Password?</a>
+        </div>
+        <div class="text-center">
+            <a asp-action="register" asp-controller="account" class="btn btn-link">Register as a new user</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+    {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
