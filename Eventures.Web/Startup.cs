@@ -54,7 +54,8 @@ namespace Eventures.Web
                 .AddEntityFrameworkStores<EventuresDbContext>();
             // Register new services here
             services.AddTransient<IAccountService, AccountService>();
-
+            services.AddTransient<IEventsService, EventsService>();
+            services.AddTransient<IOrderService, OrdersServices>();
             services.ConfigureApplicationCookie(opt =>
             {
                 opt.LoginPath = "/Account/Login";

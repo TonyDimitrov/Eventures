@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Eventures.Web.ViewModels.EventVM>
+
+@{
+    ViewData["Title"] = "AllEvents";
+}
+
+<h2 class="mt-2 text-center">All Events</h2>
+<hr class="hr-2" />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Start
+            </th>
+            <th>
+                End
+            </th>
+            <th>
+                Actions
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var _event in Model)
+        {
+            <tr>
+                <td>
+                    @_event.Name
+                </td>
+                <td>
+                    @_event.Start
+                </td>
+                <td>
+                    @_event.End
+                </td>
+                <td>
+                        <form class="form-inline my-2 my-lg-0" asp-action="create" asp-controller="orders" method="post">
+                            <label class="mr-2">Tickets</label>
+                            <input class="form-control mr-sm-2" type="search" name="Tickets">
+                            <input type="text" name="Id" value="@_event.Id" hidden />
+                            <button class="btn my-2 my-sm-0 chushka-bg-color" type="submit">Order</button>
+                        </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

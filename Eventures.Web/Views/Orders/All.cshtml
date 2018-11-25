@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Eventures.Web.ViewModels.OrderVM>
+
+@{
+    ViewData["Title"] = "All";
+}
+
+<h2 class="text-center">All</h2>
+<hr class="hr-2"/>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Event)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderedOn)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Event)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderedOn)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
